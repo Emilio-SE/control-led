@@ -1,18 +1,19 @@
-#include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
+#include "animaciones.h"
+#include "uart.h"
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    Serial.begin(115200);
+    iniciarUART();
+    // Inicializar FastLED
+    FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
+    FastLED.setBrightness(BRIGHTNESS);
+    FastLED.clear();
+    FastLED.show();
+
+    xTaskCreate(manejarAnimaciones, "Animaciones", 4096, NULL, 1, NULL);
+    xTaskCreate(observadorUART, "comunicacionUART", 2048, NULL, 1, NULL);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+     vTaskDelay(portMAX_DELAY);
 }
