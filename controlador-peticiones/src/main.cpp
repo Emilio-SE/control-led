@@ -1,18 +1,30 @@
+#include "secrets.h"
+#include "uart.h"
 #include <Arduino.h>
+#include <WiFi.h>
+#include <BlynkSimpleEsp32.h>
 
-// put function declarations here:
-int myFunction(int, int);
+void enviarComando(char comando);
+
+// VIRTUAL PINS
+BLYNK_WRITE(V0) { if(param.asInt()) enviarComando('B'); }
+BLYNK_WRITE(V1) { if(param.asInt()) enviarComando('I'); }
+BLYNK_WRITE(V2) { if(param.asInt()) enviarComando('L'); }
+BLYNK_WRITE(V3) { if(param.asInt()) enviarComando('R'); }
+BLYNK_WRITE(V4) { if(param.asInt()) enviarComando('S'); }
+
+void enviarComando(char comando) {
+  Serial.println(comando);
+  Serial1.write(comando);
+}
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(UART_BAUDRATE);
+  Serial1.begin(UART_BAUDRATE, SERIAL_8N1, TX_PIN, RX_PIN);
+  Blynk.begin(auth, ssid, password);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  Blynk.run();
+  delay(50);
 }
