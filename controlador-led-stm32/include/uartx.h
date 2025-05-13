@@ -1,5 +1,4 @@
 #pragma once
-#include <Arduino.h>
 #include "animaciones.h"
 
 #define UART_BAUDRATE 115200
