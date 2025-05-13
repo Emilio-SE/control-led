@@ -406,7 +406,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="CLD_Mrnh1O1IzleY-QFv" name="Diagrama de flujo">
-    <mxGraphModel dx="1240" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2593" dy="1527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1057,6 +1057,11 @@
         </mxCell>
         <mxCell id="ZXvTtGvEjz364CdbiSpB-275" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="ZXvTtGvEjz364CdbiSpB-262" target="ZXvTtGvEjz364CdbiSpB-274">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZXvTtGvEjz364CdbiSpB-352" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;No&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZXvTtGvEjz364CdbiSpB-275">
+          <mxGeometry x="-0.4045" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ZXvTtGvEjz364CdbiSpB-262" value="¿Hay petición entrante?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="346.67" y="2040" width="145" height="80" as="geometry" />
